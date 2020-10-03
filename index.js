@@ -34,9 +34,11 @@ resultE2 = resultE.find(team => team["Win conditions"]);
 console.log("Winner: " + resultE2["Win conditions"]);
 /* Task 2: Create a function called  getFinals that takes `data` as an argument and returns an array of objects with only finals data */
 
-function getFinals() {
-   
+function getFinals(data) {
+   const finals = data.filter(stage => stage.Stage === "Final");
+   return finals;
 };
+console.log(getFinals(fifaData));
 
 /* Task 3: Implement a higher-order function called `getYears` that accepts the callback function `getFinals`, and returns an array called `years` containing all of the years in the dataset */
 
