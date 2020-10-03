@@ -1,7 +1,7 @@
-import { fifaData } from './fifa.js';
-console.log(fifaData);
+const fifaData = require('./fifa.js').fifaData;
+//console.log(fifaData);
 
-console.log('its working');
+//console.log('its working');
 // ⚽️ M  V P ⚽️ //
 
 /* Task 1: Investigate the data above. Practice accessing data by console.log-ing the following pieces of data 
@@ -15,8 +15,8 @@ console.log('its working');
 
 /* Task 2: Create a function called  getFinals that takes `data` as an argument and returns an array of objects with only finals data */
 
-function getFinals(/* code here */) {
-    console.log(test_code);
+function getFinals() {
+   
 };
 
 /* Task 3: Implement a higher-order function called `getYears` that accepts the callback function `getFinals`, and returns an array called `years` containing all of the years in the dataset */
