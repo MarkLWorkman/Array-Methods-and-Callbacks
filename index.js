@@ -71,10 +71,15 @@ Parameters:
  * callback function getYears
  */
 
-//function getWinnersByYear(callback, callback2) {
-//    let winners = callback(callback2(fifaData));
-//    return `In ${winners.Year}, ${winners.country} won the world cup!`;
-//};
+function getWinnersByYear(callback, callback2) {
+    const winners = callback(getFinals(fifaData));
+    const years = callback2(getFinals(fifaData));
+    //console.log(winners);
+    //console.log(years);
+    for (let i = 0; i < winners.length; i++) {
+        console.log(`In ${years[i]}, ${winners[i]} won the world cup!`);
+        }
+};
 
 console.log(getWinnersByYear(getWinners, getYears));
 
